@@ -1,6 +1,6 @@
 # Cloudflare Tunnel PoC with Authentication
 
-A proof of concept for exposing local applications to the internet using Cloudflare Tunnel with HTTP Basic Authentication. Perfect for testing before deploying to a Raspberry Pi 5!
+A proof of concept for exposing local applications to the internet using Cloudflare Tunnel with HTTP Basic Authentication.
 
 ## What This Project Demonstrates
 
@@ -125,18 +125,7 @@ curl http://localhost:8080/status    # Returns: JSON status
    cp .env.example .env
    # Edit .env with your tunnel token
    ```
-6. **Start Production**: `docker-compose up -d`
-
-## Raspberry Pi 5 Deployment
-
-This exact setup works perfectly on Raspberry Pi 5:
-
-1. **Transfer files** to your Pi
-2. **Install Docker**: `curl -fsSL https://get.docker.com | sh`
-3. **Run setup**: `./manage-users.sh setup && docker-compose up -d`
-4. **Create tunnel**: `./run-tunnel.sh`
-
-The Pi will handle multiple services, use minimal resources (~5W), and provide 24/7 access to your applications.
+4. **Start Production**: `docker-compose up -d`
 
 ## Configuration Files Explained
 
@@ -150,7 +139,7 @@ Creates nginx-based container with authentication support, copies HTML content a
 Web server configuration with HTTP Basic Auth enabled, security headers, and public monitoring endpoints.
 
 ### `index.html`
-Protected dashboard showing connection status, system information, and authentication confirmation.
+Clean, professional dashboard showing connection status, authentication confirmation, and real-time metrics.
 
 ### `manage-users.sh`
 Script for managing HTTP Basic Auth users - create, list, delete users with encrypted password storage.
@@ -169,8 +158,9 @@ Convenience script that starts the application and creates a Cloudflare tunnel w
 
 If working correctly, you should see:
 - Browser authentication prompt on public URL
-- Green status indicators after login
-- Your external IP displayed on dashboard
+- Connection status indicators showing active/secure states
+- Real-time metrics and connection details
+- Your external IP and geo location displayed
 - Public health/status endpoints accessible without auth
 
 ## Learn More
@@ -180,5 +170,3 @@ If working correctly, you should see:
 - [nginx HTTP Basic Auth](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html)
 
 ---
-
-**Ready to deploy your secure cloud server on Raspberry Pi 5!**
