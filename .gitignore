@@ -12,12 +12,6 @@ Icon?
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
 
-# Docker
-.dockerignore
-Dockerfile*
-docker-compose*
-.docker
-
 # Web
 node_modules/
 npm-debug.log*
@@ -69,3 +63,6 @@ logs/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Authentication files (contains passwords)
+auth/.htpasswd
