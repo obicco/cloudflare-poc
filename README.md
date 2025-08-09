@@ -168,5 +168,3 @@ If working correctly, you should see:
 - [Cloudflare Tunnel Documentation](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/)
 - [Docker Compose Reference](https://docs.docker.com/compose/)
 - [nginx HTTP Basic Auth](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html)
-
----
